@@ -11,7 +11,7 @@ Outside of school, my hobbies consists of illustrating and Pilates.
 
 This website will contain my projects for STA 9750.
 
-[LinkedIn](www.linkedin.com/in/mahisa-alam)
+[LinkedIn](https://www.linkedin.com/in/mahisa-alam)
 
 ```{r}
 #| include: false
