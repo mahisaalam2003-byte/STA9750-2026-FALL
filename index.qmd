@@ -1,10 +1,17 @@
 ---
-title: "Mahisa Alam"
+title: "Index"
 ---
+## About Me
 
-Hi! My name is Mahisa Alam. I am a student at Baruch College.
+Hi, my name is Mahisa Alam. I am a graduate student at Baruch College and I am pursuing my masters in Business Analytics with a concentration in Marketing Analytics. 
 
-This website contains my projects for STA 9750.
+I pursed Digital Marketing during as an undergrad and decided to further my degree into Marketing Analytics to connect my creative side with data and be an essential asset to businesses, as I can be able to provide efficient insights while creating campaigns so that they can succeed. 
+
+Outside of school, my hobbies consists of illustrating and Pilates.
+
+This website will contain my projects for STA 9750.
+
+[LinkedIn](www.linkedin.com/in/mahisa-alam)
 
 ```{r}
 #| include: false
@@ -14,3 +21,25 @@ This website contains my projects for STA 9750.
 --------------
 
 Last Updated: `r format(Sys.time(), "%A %m %d, %Y at %H:%M%p")`
+
+--------------
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+if(!require("leaflet")){
+    options(repos=c(CRAN="https://cloud.r-project.org"))
+    install.packages("leaflet")
+    stopifnot(require("leaflet"))
+}
+
+baruch_longitude <- -73.98333
+baruch_latitude  <- +40.74028
+
+leaflet() |>
+  addTiles() |>
+  setView(baruch_longitude, baruch_latitude, zoom=17) |>
+  addPopups(baruch_longitude, baruch_latitude, 
+            "I am a Master's student at <b>Baruch College</b>!")
+```
